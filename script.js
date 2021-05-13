@@ -6,11 +6,11 @@ const body = document.body;
 
 
 anime({
-    targets: body,
+    targets: textBody,
     opacity: () => {
-            let random = Math.random() + 0.2
+            let random = Math.random() + 0.4;
             if (random > 0.9) {
-                return random - 0.1
+                return random - 0.3
             }
             return random
         },
