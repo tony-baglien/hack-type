@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+:root {
+  --terminal-green: #03e003;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -19,16 +23,16 @@ body {
     ),
     linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
   background-size: 2px 100%, 100% 1px;
-  animation: textShadow 1.6s infinite;
 }
 
 .textBody {
   font-family: 'VT323', monospace;
   font-size: 24px;
-  color: rgb(3, 224, 3);
+  color: var(--terminal-green);
   white-space: pre-wrap;
-  z-index: 100;
+  z-index: 2;
   flex: 1 0 auto;
+  animation: textShadow 1.6s infinite;
 }
 
 #footer {
@@ -50,7 +54,7 @@ body {
 #footer li:hover {
   background-color: rgba(0, 0, 0, 0.25);
   color: rgb(3, 224, 3);
-  border-top: 2px solid rgb(3, 244, 3);
+  border-top: 2px solid var(--terminal-green);
 }
 
 #footer li a {
@@ -60,7 +64,57 @@ body {
   color: white;
 }
 
-#footer li a:hover {
+/* Winbox */
+
+.about-window {
+  z-index: 1;
+}
+
+.wb-title {
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+}
+.about-window .wb-body {
+  text-align: center;
+  background: #161b22;
+  font-family: 'VT323', monospace;
+  line-height: 0.7;
+  font-size: 20px;
+  color: var(--terminal-green);
+}
+
+.about-window .wb-body p {
+  padding: 25px 10px;
+}
+
+.contact-window .wb-body {
+  background: #161b22;
+  font-family: 'VT323', monospace;
+  overflow: hidden;
+  line-height: 0.7;
+  font-size: 18px;
+  color: var(--terminal-green);
+}
+.contact-window .wb-body p {
+  line-height: 1.4;
+}
+
+#contact-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-content pre {
+  margin-left: -105px;
+}
+
+#contact-content .glitch {
+  margin-top: 11%;
+}
+
+/* Shadow Glitch */
+.border-shadow {
+  animation: borderShadow 1.6s infinite;
 }
 
 /* CREDIT DEVELOPERS FOR ANIMATION */
@@ -147,6 +201,93 @@ body {
   }
   100% {
     text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5),
+      -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+}
+
+@keyframes borderShadow {
+  0% {
+    box-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
+      -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  5% {
+    box-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5),
+      -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  10% {
+    box-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5),
+      -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  15% {
+    box-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5),
+      -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  20% {
+    box-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5),
+      -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  25% {
+    box-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5),
+      -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  30% {
+    box-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5),
+      -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  35% {
+    box-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.5),
+      -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  40% {
+    box-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.5),
+      -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  45% {
+    box-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.5),
+      -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  50% {
+    box-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5),
+      -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  55% {
+    box-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5),
+      -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  60% {
+    box-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.5),
+      -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  65% {
+    box-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5),
+      -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  70% {
+    box-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5),
+      -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  75% {
+    box-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5),
+      -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  80% {
+    box-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5),
+      -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  85% {
+    box-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5),
+      -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  90% {
+    box-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.5),
+      -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  95% {
+    box-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5),
+      -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  100% {
+    box-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5),
       -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
 }

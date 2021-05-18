@@ -1,11 +1,11 @@
-import WinBox from './winbox.bundle.js';
-
 let sourceCode = '';
 const textBody = document.querySelector('.textBody');
 const body = document.body;
 
 const about = document.querySelector('#about');
+const aboutContent = document.querySelector('#about-content');
 const contact = document.querySelector('#contact');
+const contactContent = document.querySelector('#contact-content');
 const moreInfo = document.querySelector('#more-info');
 
 anime({
@@ -52,6 +52,44 @@ document.addEventListener('keydown', () => {
 
 //Footer Menu
 
-about.addEventListener('onclick', () => {
-  new WinBox('About');
+about.addEventListener('click', () => {
+  new WinBox({
+    title: 'About Me',
+    class: ['about-window', 'no-move', 'no-full', 'no-max', 'no-min'],
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    background: '#03e003',
+    mount: aboutContent,
+    font: 'VST323',
+    onblur: function () {
+      this.setBackground('#112c4f');
+      this.addClass('border-shadow');
+    },
+    onfocus: function () {
+      this.setBackground('#03e003');
+      this.removeClass('border-shadow');
+    },
+  });
+});
+
+contact.addEventListener('click', () => {
+  new WinBox({
+    title: 'Contact Us',
+    class: ['contact-window', 'no-move', 'no-full', 'no-max', 'no-min'],
+    top: '25px',
+    left: '25px',
+    background: '#03e003',
+    mount: contactContent,
+    width: '735px',
+    onblur: function () {
+      this.setBackground('#112c4f');
+      this.addClass('border-shadow');
+    },
+    onfocus: function () {
+      this.setBackground('#03e003');
+      this.removeClass('border-shadow');
+    },
+  });
 });
