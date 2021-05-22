@@ -175,6 +175,7 @@ moreInfo.addEventListener('click', () => {
 });
 
 load_source_code();
+textBody.style.maxWidth = window.innerWidth;
 if (window.innerWidth < 450) {
   autoTypeInt = setInterval(() => {
     autoType();
