@@ -12,6 +12,7 @@
 body {
   height: 100vh;
   overflow-y: hidden;
+  overflow-x: hidden;
   background: rgba(32, 32, 32, 1);
   background-image: linear-gradient(
       90deg,
