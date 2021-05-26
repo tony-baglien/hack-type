@@ -66,6 +66,9 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+  .textBody {
+    display: inline-block;
+  }
   #header {
     position: fixed;
     top: 40%;
