@@ -63,7 +63,7 @@ function keyboardType() {
 }
 
 function autoType() {
-  textBody.innerText = sourceCode.substring(startIdx, endIdx + CHAR_SPEED);
+  textBody.innerHTML = sourceCode.substring(startIdx, endIdx + CHAR_SPEED);
   endIdx += CHAR_SPEED;
   if (endIdx > sourceCode.length) {
     startIdx = 0;
